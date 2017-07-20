@@ -85,16 +85,24 @@ function generic_email_ajax_email_submit()
 {
     global $wpdb;
     global $generic_email_plugin_table_name;
-    $updated = $wpdb->insert($generic_email_plugin_table_name, array(
-        "email" => sanitize_email($_POST['email']),
-        "secondary_optin" => $_POST['secondary_optin'] == 'true' ? true : false,
-    ), array('%s', '%s'));
+    /** I'll explain why this code is commented out in my email submission
+    $email = sanitize_email($_POST['email']);
+    if filter_var($email, FILTER_VALIDATE_EMAIL) {
+    */
+        $updated = $wpdb->insert($generic_email_plugin_table_name, array(
+            "email" => $email,
+            "secondary_optin" => $_POST['secondary_optin'] == 'true' ? true : false,
+        ), array('%s', '%s'));
 
-    if ($updated) {
-        wp_send_json_success();
-    } else {
+        if ($updated) {
+            wp_send_json_success();
+        } else {
+            wp_send_json_error();
+    }
+    /** } else {
         wp_send_json_error();
     }
+    */
 }
 add_action('wp_ajax_generic_email_submit', 'generic_email_ajax_email_submit');
 add_action('wp_ajax_nopriv_generic_email_submit', 'generic_email_ajax_email_submit');
