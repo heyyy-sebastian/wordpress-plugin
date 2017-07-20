@@ -1,5 +1,5 @@
 <?php
-// Template for email form 
+// Template for email form
 ?>
 <script type="text/javascript">
 var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
@@ -13,7 +13,7 @@ var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
       <input type="text" id="ge-email-address" placeholder="Email Address"/>
     </p>
     <p>
-      <input type="checkbox" id="ge-optin"/>Sign up for stuff here!
+      <input type="checkbox" id="ge-optin"/>Get latest updates from Generic Corp.
     </p>
     <p>
       <input type="submit" value="Submit">

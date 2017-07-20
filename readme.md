@@ -19,8 +19,8 @@ You've been asked to complete several tasks.
 ## Completion Checklist:
 Please fix as many of the following issues as you can within a two hour window
 
-- [] Please update the text of the secondary opt-in from 'Sign up for stuff here!' to 'Get latest updates from Generic Corp.'
-- [] Client requests you change the color of the submit button to red, because it may increase conversion rates. They have no preference on the shade of red.
+- [X] Please update the text of the secondary opt-in from 'Sign up for stuff here!' to 'Get latest updates from Generic Corp.'
+- [X] Client requests you change the color of the submit button to red, because it may increase conversion rates. They have no preference on the shade of red.
 - [] **BUG** Client reports email addresses are not being saved to the database, please find and fix the issue.
 - [] Client is complaining that users are submitting blank email addresses, please add some basic validation prior to form submission.
 - [] Client does not like the alert confirmation/error messages after form submission.  They would like you to hide the form and show a success message that reads "Thanks for signing up for our email newsletter!" or an error message that reads "We're sorry, seems like something went wrong.  Please try again later."

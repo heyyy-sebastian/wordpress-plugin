@@ -1,1 +1,4 @@
 /* Styles go here */
+input[type="submit"] {
+  background-color: #d82020;
+}
