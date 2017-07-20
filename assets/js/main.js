@@ -4,8 +4,8 @@ jQuery(document).ready(function($){
   $(document).on('submit', '#email-form', function (e) {
     e.preventDefault();
     var data = {
-      action: "generic_email_submit",
-      email: $('ge-email-address').val(),
+      action: "generic_email_ajax_email_submit",
+      email: $('#ge-email-address').val(),
       secondary_optin: $('#ge-optin').is(':checked'),
     }
 
@@ -19,6 +19,6 @@ jQuery(document).ready(function($){
       error: function () {
         alert("Uh oh, something went wrong")
       }
-    })
-  })
-});
+    })//end ajax call
+  })//end form submission
+}); //end wrapper fn
