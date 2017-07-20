@@ -14,10 +14,12 @@ jQuery(document).ready(function($){
       method: 'post',
       data: data,
       success: function () {
-        alert("You've successfully signed up for our newsletter!")
+        alert("Thanks for signing up for our email newsletter!");
+        //trigger transition to hide form
+        $('.generic-email-widget').addClass('slideUp');
       },
       error: function () {
-        alert("Uh oh, something went wrong")
+        alert("We're sorry, seems like something went wrong.  Please try again later.");
       }
     })//end ajax call
   })//end form submission

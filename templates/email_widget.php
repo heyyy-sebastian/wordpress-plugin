@@ -10,7 +10,7 @@ var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
   <h1>Sign up for our mailing list!</h1>
   <form id="email-form">
     <p>
-      <input type="text" id="ge-email-address" placeholder="Email Address"/>
+      <input type="email" id="ge-email-address" placeholder="Email Address"/>
     </p>
     <p>
       <input type="checkbox" id="ge-optin"/>Get latest updates from Generic Corp.

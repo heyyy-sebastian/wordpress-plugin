@@ -1,4 +1,19 @@
-/* Styles go here */
+/* email widget styles */
+/* submit button color*/
 input[type="submit"] {
   background-color: #d82020;
+}
+
+/* form submission animation */
+.generic-email-widget {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: visibility .5s, opacity 0.5s linear;
+}
+
+.generic-email-widget.slideUp{
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
 }
