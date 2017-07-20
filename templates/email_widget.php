@@ -13,7 +13,10 @@ var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
       <input type="email" id="ge-email-address" placeholder="Email Address"/>
     </p>
     <p>
-      <input type="checkbox" id="ge-optin"/>Get latest updates from Generic Corp.
+      <input type="checkbox" id="ge-optin-2"/>Get latest updates from Generic Corp.
+    </p>
+    <p>
+      <input type="checkbox" id="ge-optin-3"/>Sign me up for great deals from GenericDealz.com
     </p>
     <p>
       <input type="submit" value="Submit">

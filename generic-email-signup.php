@@ -63,6 +63,7 @@ function generic_email_plugin_table_init()
 		id bigint(11) NOT NULL AUTO_INCREMENT,
 		email varchar(255) NOT NULL,
     secondary_optin boolean DEFAULT 0,
+    tertiary_optin boolean DEFAULT 0,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 		PRIMARY KEY id (id)
@@ -92,7 +93,8 @@ function generic_email_ajax_email_submit()
         $updated = $wpdb->insert($generic_email_plugin_table_name, array(
             "email" => $email,
             "secondary_optin" => $_POST['secondary_optin'] == 'true' ? true : false,
-        ), array('%s', '%s'));
+            "tertiary_optin" => $_POST['tertiary_optin'] == 'true' ? true : false,
+        ), array('%s', '%s', '%s'));
 
         if ($updated) {
             wp_send_json_success();

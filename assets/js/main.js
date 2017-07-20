@@ -25,7 +25,8 @@ jQuery(document).ready(function($){
     var data = {
       action: 'generic_email_ajax_email_submit',
       email: $('#ge-email-address').val(),
-      secondary_optin: $('#ge-optin').is(':checked'),
+      secondary_optin: $('#ge-optin-2').is(':checked'),
+      tertiary_optin: $('#ge-optin-3').is(':checked')
     }
 
     //trigger ajax call after email field is checked
