@@ -87,7 +87,7 @@ function generic_email_ajax_email_submit()
     global $generic_email_plugin_table_name;
     /** I'll explain why this code is commented out in my email submission
     $email = sanitize_email($_POST['email']);
-    if filter_var($email, FILTER_VALIDATE_EMAIL) {
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
     */
         $updated = $wpdb->insert($generic_email_plugin_table_name, array(
             "email" => $email,
